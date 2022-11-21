@@ -1,4 +1,4 @@
-// import './App.css'
+
 import NavBar from './components/NavBar'
 import Home from './pages/Home'
 // import Students from './pages/Students'
@@ -22,7 +22,7 @@ function App() {
           <Route path="/:courseId" element={<CourseDetails />} />
           <Route path="/AddStudent" element={<AddStudentForm />} />
           <Route path="/AddCourse" element={<AddCourseForm />} />
-          {/* <Route path="/studentcard" element={<StudentCard />} /> */}
+
         </Routes>
       </main>
     </div>
