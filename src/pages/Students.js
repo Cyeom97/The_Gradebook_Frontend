@@ -10,7 +10,7 @@ const Students = () => {
     <div className="students-list">
       {mockData.map((cardItem) => {
         console.log(cardItem)
-        return <StudentCard />
+        // return <StudentCard />
       })}
     </div>
   )

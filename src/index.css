@@ -11,3 +11,60 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  margin: 0px 5px;
+}
+
+a:link {
+  text-decoration: none;
+  color: black
+}
+
+a:visited {
+  text-decoration: none;
+  color: black
+}
+a:hover {
+  text-decoration: none;
+  color: grey;
+  scale: 1.05;
+}
+a:active {
+  text-decoration: none;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-container {
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-column {
+  justify-content: center;
+  align-items: center;
+}
+
+
+#header {
+  background-color: white;
+  filter: drop-shadow(1px 1px 2px #dcdcdc);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  font-family: 'Lato', sans-serif;
+  color: #222223;
+}
+
+.nav-links {
+  justify-content: space-between;
+}
