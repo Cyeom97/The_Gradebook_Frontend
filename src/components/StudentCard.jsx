@@ -6,7 +6,7 @@ const StudentCard = (props) => {
     const navigate = useNavigate()
 
     const cardHandleClick = () => {
-        navigate(`/studentdetails/${props.id}`)
+        navigate(`/studentdetails`)
     }
 
    

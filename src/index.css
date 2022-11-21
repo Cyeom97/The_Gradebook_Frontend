@@ -34,3 +34,6 @@ code {
   margin: 10px;
 }
 
+.studentcard:hover {
+  background-color: rgb(192, 221, 250);
+}
