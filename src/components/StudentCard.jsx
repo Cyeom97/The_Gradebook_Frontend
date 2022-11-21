@@ -1,18 +1,20 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router'
 
 const StudentCard = (props) => {
+
     const navigate = useNavigate()
 
     const cardHandleClick = () => {
-        navigate(`/____/${props.id}`)
+        navigate(`/studentdetails/${props.id}`)
     }
 
+   
     return (
-        <ul  onClick={cardHandleClick} className="studentcard-container">
-            <li className="studentcard">
-                <h3>{props.studentName}</h3>
-                <p>{props.overallGpa}</p>
+        <ul  className="studentcard-container">
+            <li onClick={cardHandleClick} className="studentcard">
+                <h3 className='student-name'>{props.name}</h3>
+                <p className='student-gpa'>GPA: {props.gpa}</p>
             </li>
         </ul>
     )

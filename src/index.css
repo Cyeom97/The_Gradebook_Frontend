@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.studentcard-container {
+  padding: 0;
+}
+
+.students-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 150px auto;
+  border: 1px solid gray;
+  width: 700px;
+}
+
+.studentcard {
+  border: 1px solid black;
+  list-style-type: none;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px;
+}
+
