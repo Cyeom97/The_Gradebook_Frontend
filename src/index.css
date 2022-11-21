@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  min-width: 400px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -44,18 +45,19 @@ a {
 
 a:link {
   text-decoration: none;
-  color: black
+  color: #4e4e50
 }
 
 a:visited {
   text-decoration: none;
-  color: black
+  color: #4e4e50
 }
 a:hover {
   text-decoration: none;
-  color: grey;
-  scale: 1.05;
+  color: rgb(36, 36, 36);
+  scale: 1.10;
 }
+
 a:active {
   text-decoration: none;
 }
@@ -78,6 +80,27 @@ a:active {
 .center-column {
   justify-content: center;
   align-items: center;
+}
+
+.home-cards {
+  justify-content: space-evenly;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+.students-card, .courses-card {
+  margin: 30px;
+  background-color: rgb(211,211,211);
+  padding: 50px;
+  font-size: 8vh;
+  border: 2px solid black;
+  border-radius: 10px;
+  filter: drop-shadow(0px 2px 2px  #171617);
+}
+
+.students-card:hover, .courses-card:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(10px 10px 20px #1e1e1e);
 }
 
 
