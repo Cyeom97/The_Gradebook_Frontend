@@ -20,6 +20,7 @@ const Students = () => {
   return (
     <div className="students-list">
       {mockData.map((cardItem) => {
+
         console.log(cardItem.name)
         return <StudentCard name={cardItem.name} gpa={cardItem.overallGpa} />
       })}
