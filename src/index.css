@@ -38,6 +38,38 @@ code {
   background-color: rgb(192, 221, 250);
 }
 
+
+.student-name-gpa {
+  text-align: left;
+  width: 600px;
+  margin: 50px auto;
+}
+.form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  width: 600px;
+  border: 1px solid rgb(230, 239, 242);
+  margin: 0 auto;
+
+}
+
+.column {
+  margin: 0 auto;
+  border: 1px solid rgb(206, 209, 211);
+  width: 600px;
+}
+.row {
+  border: 1px solid rgb(206, 209, 211);
+  padding: 10px;
+}
+
+
+
+
+
+
 a {
   margin: 0px 5px;
 }
