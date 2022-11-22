@@ -114,6 +114,10 @@ a:active {
   align-items: center;
 }
 
+.center-align {
+  text-align: center;
+}
+
 .home-cards {
   justify-content: space-evenly;
   margin: 10px;
@@ -142,11 +146,35 @@ a:active {
   position: sticky;
   top: 0;
   z-index: 1;
-  font-family: 'Lato', sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   color: #222223;
 }
 
 .nav-links {
   justify-content: space-between;
+}
+
+#nav-logo {
+  margin: 0px 0px 0px 5px;
+  font-size: 5vh;
+}
+
+.course-box {
+  background-color: #dcdcdc;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 50px 100px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 5vh;
+}
+
+.course-box:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(5px 5px 5px #575656);
+  scale: 1.03
 }
 

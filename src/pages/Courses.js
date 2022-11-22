@@ -25,7 +25,12 @@ const Courses = ( ) => {
     }, [])
 
     return(
-        <><div>Courses</div><div className="courses-container"></div>
+
+        <>
+            <div className='center-align'>
+                <h1 id='courses-logo'>
+                    Courses
+                </h1>
         <div>
             {courses.map((course) => (
                 <>
@@ -35,8 +40,20 @@ const Courses = ( ) => {
             <Link to = {`/courses/create`}>
                 <button>Create Course</button>
             </Link>
+
             </div>
-            </>
+            
+            <div className="courses-container">
+                <div className='the-course-cards'>
+                    {courses.map((course) => (
+                        <div className='course-box'>
+                        {/* <div className="course-name">{course.name}</div> */}
+                            <div className='course-name ' onClick={() => chooseCourse(course)}>{course.name} </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </>
     )
 }
 
