@@ -73,7 +73,7 @@ const Students = () => {
           let totalScore = 0
 
           return (
-            <div>
+            <div className='list'>
               <h3>{studentItem.name}</h3>
               <p>{studentItem.email}</p>
               <div>
