@@ -19,7 +19,7 @@ const Students = () => {
 
       let response = await axios.get('http://localhost:3001/students')
       setStudentGallery(response.data)
-      console.log('get all students ', response.data)
+      console.log('get all students', response.data)
     }
 
     getAllStudents()
