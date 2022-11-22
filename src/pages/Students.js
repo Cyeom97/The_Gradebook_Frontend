@@ -45,11 +45,9 @@ const Students = () => {
   }
 
   console.log('current grades ', currentGrades)
-  //console.log('current student gallery ', currentStudentGallery)
 
   return (
     <div className="students-list">
-
       <form onSubmit={handleSubmit} className="form-type">
         <label htmlFor="name">Name:</label>
         <input id="name" value={form.name} onChange={handleChange}></input>
