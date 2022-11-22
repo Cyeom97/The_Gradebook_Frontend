@@ -33,11 +33,11 @@ const Courses = ( ) => {
                             Courses
                         </h1>
                     </div>
-                    <div>
+                </div>
+                <div className='add-course-btn center-align'>
                         <Link to = {`/courses/create`}>
-                            <button>Create Course</button>
+                            <button id='add-btn'>Create Course</button>
                         </Link>
-                    </div>
                 </div>
                 
                 <div className="courses-container">
