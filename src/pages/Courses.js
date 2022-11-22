@@ -2,6 +2,7 @@ import axios from "axios"
 import { BASE_URL} from "../globals"
 import {useState, useEffect} from 'react'
 import { useNavigate } from "react-router-dom"  
+import { Link } from "react-router-dom"
 
 const Courses = ( ) => {
     let navigate = useNavigate()
@@ -31,6 +32,9 @@ const Courses = ( ) => {
                 {/* <div className="course-name">{course.name}</div> */}
                 <div onClick={() => chooseCourse(course)}>{course.name} </div></>
             ))}
+            <Link to = {`/courses/create`}>
+                <button>Create Course</button>
+            </Link>
             </div>
             </>
     )
