@@ -13,7 +13,7 @@ const Students = () => {
 
   useEffect(() => {
     const getAllStudents = async () => {
-      let response = await axios.get('http://localhost:3001/students')
+      let response = await axios.get(`http://localhost:3001/students`)
       setStudentGallery(response.data)
     }
     getAllStudents()
@@ -40,6 +40,12 @@ const Students = () => {
 
   return (
     <div className="students-list">
+
+      {currentStudentGallery.map((cardItem) => {
+        console.log(cardItem.name)
+        return <StudentCard name={cardItem.name} gpa={cardItem.overallGpa} />
+      })}
+
       <form onSubmit={handleSubmit} className="form-type">
         <label htmlFor="name">Name:</label>
         <input id="name" value={form.name} onChange={handleChange}></input>
@@ -65,6 +71,7 @@ const Students = () => {
           <div></div>
         )
       )}
+
     </div>
   )
 }
