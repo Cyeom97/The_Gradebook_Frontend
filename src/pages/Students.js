@@ -5,6 +5,7 @@ import axios from 'axios'
 const Students = () => {
   const [currentStudentGallery, setStudentGallery] = useState([])
   const [currentGrades, setGrades] = useState([])
+  const [allCourses, setAllCourses] = useState([])
   const [newKids, setNewKids] = useState([])
   const [form, setForm] = useState({
     name: '',
@@ -13,9 +14,14 @@ const Students = () => {
 
   useEffect(() => {
     const getAllStudents = async () => {
-      let response = await axios.get(`http://localhost:3001/students`)
+      let cresponse = await axios.get('http://localhost:3001/courses')
+      setAllCourses(cresponse.data)
+
+      let response = await axios.get('http://localhost:3001/students')
       setStudentGallery(response.data)
+      console.log('get all students', response.data)
     }
+
     getAllStudents()
   }, [])
 
@@ -38,13 +44,11 @@ const Students = () => {
     setForm({ name: '', email: '' })
   }
 
+  console.log('current grades ', currentGrades)
+  //console.log('current student gallery ', currentStudentGallery)
+
   return (
     <div className="students-list">
-{/* 
-      {currentStudentGallery.map((cardItem) => {
-        console.log(cardItem.name)
-        return <StudentCard name={cardItem.name} gpa={cardItem.overallGpa} />
-      })} */}
 
       <form onSubmit={handleSubmit} className="form-type">
         <label htmlFor="name">Name:</label>
@@ -53,8 +57,61 @@ const Students = () => {
         <input id="email" value={form.email} onChange={handleChange}></input>
         <button type="submit">Add Student</button>
       </form>
-      {currentGrades.map((student) => (
-        <div className='student-card'>
+
+      <div
+        style={{
+          backgroundColor: '#efefef',
+          width: '100%',
+          padding: '1em',
+          boxSizing: 'border-box'
+        }}
+      >
+        {currentStudentGallery.map((studentItem) => {
+          // filter grades by student id, store in a variable to be reused to iterate score and total GPA
+          const currentFilteredGrade = currentGrades.filter((gradeItem) => {
+            return gradeItem.studentId === studentItem.id
+          })
+
+          let totalScore = 0
+
+          return (
+            <div>
+              <h3>{studentItem.name}</h3>
+              <p>{studentItem.email}</p>
+              <div>
+                {currentFilteredGrade.map((gradeItem) => {
+                  const course = allCourses.find((courseItem) => {
+                    return courseItem.id === gradeItem.courseId
+                  })
+
+                  totalScore += gradeItem.score
+
+                  return (
+                    <div
+                      style={{
+                        backgroundColor: '#dedede',
+                        margin: '5px',
+                        padding: '5px'
+                      }}
+                    >
+                      course name: {course.name} score:
+                      {gradeItem.score}
+                    </div>
+                  )
+                })}
+              </div>
+              <p>
+                GPA:
+                {totalScore / currentFilteredGrade.length}
+              </p>
+            </div>
+          )
+        })}
+      </div>
+
+      {/* {currentGrades.map((student) => (
+        <div style={{ border: '1px solid red' }}>
+
           <h2>Name: {student.pupil.name}</h2>
           <h2>Email: {student.pupil.email}</h2>
           <h2>Course: {student.scores.name}</h2>
@@ -70,8 +127,7 @@ const Students = () => {
         ) : (
           <div></div>
         )
-      )}
-
+      )} */}
     </div>
   )
 }
