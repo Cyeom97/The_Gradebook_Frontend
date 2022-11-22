@@ -12,6 +12,24 @@ const Students = () => {
     email: ''
   })
 
+  const getLetterGrade = (studentGrade) => {
+    if (studentGrade < 4.1 && studentGrade > 3) {
+      return 'A'
+    }
+    if (studentGrade < 3.1 && studentGrade > 2) {
+      return 'B'
+    }
+    if (studentGrade < 2.1 && studentGrade > 1) {
+      return 'C'
+    }
+    if (studentGrade < 1.1 && studentGrade > 0) {
+      return 'D'
+    }
+    if (studentGrade < 1) {
+      return 'F'
+    }
+  }
+
   useEffect(() => {
     const getAllStudents = async () => {
       let cresponse = await axios.get('http://localhost:3001/courses')
@@ -48,24 +66,24 @@ const Students = () => {
 
   return (
     <div className="students-list">
-
       <div>
-        <h1 id='student-logo'>Students</h1>
+        <h1 id="student-logo">Students</h1>
       </div>
 
       <form onSubmit={handleSubmit} className="form-type student-form">
-        <div className='form-name'>
+        <div className="form-name">
           <label htmlFor="name">Name:</label>
           <input id="name" value={form.name} onChange={handleChange}></input>
         </div>
-        <div className='form-email'>
+        <div className="form-email">
           <label htmlFor="email">email:</label>
           <input id="email" value={form.email} onChange={handleChange}></input>
         </div>
-        <div className='form-btn'>
-          <button type="submit" id='student-btn'>Add Student</button>
+        <div className="form-btn">
+          <button type="submit" id="student-btn">
+            Add Student
+          </button>
         </div>
-
       </form>
 
       <div
@@ -85,9 +103,9 @@ const Students = () => {
           let totalScore = 0
 
           return (
-            <div className='list'>
-              <h3>{studentItem.name}</h3>
-              <p>{studentItem.email}</p>
+            <div className="list">
+              <h3 className="student-name">{studentItem.name}</h3>
+              <p className="email">{studentItem.email}</p>
               <div>
                 {currentFilteredGrade.map((gradeItem) => {
                   const course = allCourses.find((courseItem) => {
@@ -116,6 +134,10 @@ const Students = () => {
               <p className="gpa">
                 GPA:
                 {totalScore / currentFilteredGrade.length}
+              </p>
+              <p>
+                Letter Grade:
+                {getLetterGrade(totalScore / currentFilteredGrade.length)}
               </p>
             </div>
           )
