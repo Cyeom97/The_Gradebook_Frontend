@@ -88,19 +88,22 @@ const Students = () => {
 
                   return (
                     <div
+                      className="coursename-score-container"
                       style={{
                         backgroundColor: '#dedede',
                         margin: '5px',
                         padding: '5px'
                       }}
                     >
-                      course name: {course.name} score:
-                      {gradeItem.score}
+                      <div className="coursename">
+                        course name: {course.name}
+                      </div>
+                      <div className="score">score: {gradeItem.score} </div>
                     </div>
                   )
                 })}
               </div>
-              <p>
+              <p className="gpa">
                 GPA:
                 {totalScore / currentFilteredGrade.length}
               </p>

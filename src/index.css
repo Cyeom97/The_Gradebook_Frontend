@@ -22,7 +22,10 @@ code {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 150px auto;
+  margin: 50px auto;
+  border: 1px solid gray;
+  padding: 1em;
+  width: 700px;
 }
 
 .studentcard {
@@ -177,10 +180,12 @@ a:active {
   scale: 1.03
 }
 
-.student-card {
-  background-color: purple;
-  margin: 10px;
-  padding: 20px;
+.gpa {
+  font-weight:500;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(60, 126, 184);
 }
 
-
+#nav-logo:hover {
+color:#80acb9;
+}
