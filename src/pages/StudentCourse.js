@@ -18,7 +18,14 @@ const StudentCourse = () => {
 
   return (
     <><div>studentcourse</div>
-    <div>{studentcourse.name}</div>
+    <div>{studentcourse.map((studentcourse) => (
+      <><div className="studentcourse-box" key={studentcourse.id}>
+        studentId: {studentcourse.studentId}
+      </div><div>
+          courseId: {studentcourse.courseId}
+        </div></>
+    ))}
+    </div>
     
     </>
   )
