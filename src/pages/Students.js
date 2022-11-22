@@ -40,11 +40,11 @@ const Students = () => {
 
   return (
     <div className="students-list">
-
+{/* 
       {currentStudentGallery.map((cardItem) => {
         console.log(cardItem.name)
         return <StudentCard name={cardItem.name} gpa={cardItem.overallGpa} />
-      })}
+      })} */}
 
       <form onSubmit={handleSubmit} className="form-type">
         <label htmlFor="name">Name:</label>
@@ -54,7 +54,7 @@ const Students = () => {
         <button type="submit">Add Student</button>
       </form>
       {currentGrades.map((student) => (
-        <div>
+        <div className='student-card'>
           <h2>Name: {student.pupil.name}</h2>
           <h2>Email: {student.pupil.email}</h2>
           <h2>Course: {student.scores.name}</h2>
