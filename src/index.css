@@ -22,8 +22,6 @@ code {
   justify-content: center;
   flex-wrap: wrap;
   margin: 150px auto;
-  border: 1px solid gray;
-  width: 700px;
 }
 
 .studentcard {
@@ -159,7 +157,7 @@ a:active {
   font-size: 5vh;
 }
 
-.course-box {
+.course-name {
   background-color: #dcdcdc;
   border: 2px solid black;
   border-radius: 20px;
@@ -172,9 +170,16 @@ a:active {
   font-size: 5vh;
 }
 
-.course-box:hover {
+.course-name:hover {
   transform: scale(1.05);
   filter: drop-shadow(5px 5px 5px #575656);
   scale: 1.03
 }
+
+.student-card {
+  background-color: purple;
+  margin: 10px;
+  padding: 20px;
+}
+
 
