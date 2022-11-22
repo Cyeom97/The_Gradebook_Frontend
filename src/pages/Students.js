@@ -1,8 +1,12 @@
 import StudentCard from '../components/StudentCard'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 const Students = () => {
+
+  let navigate = useNavigate()
+
   const [currentStudentGallery, setStudentGallery] = useState([])
   const [currentGrades, setGrades] = useState([])
   const [allCourses, setAllCourses] = useState([])
@@ -60,6 +64,7 @@ const Students = () => {
     let newStudent = await axios.post('http://localhost:3001/students', form)
     setNewKids([...newKids, newStudent.data])
     setForm({ name: '', email: '' })
+    window.location.reload(true)
   }
 
   console.log('current grades ', currentGrades)
