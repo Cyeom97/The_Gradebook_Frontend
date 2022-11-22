@@ -222,10 +222,6 @@ text-align: center;
  
 }
 
-.coursepage-student-name {
-
-}
-
 #name, #email, #student-btn {
   margin: 10px
 }
@@ -251,4 +247,10 @@ text-align: center;
   font-size: 7vh
 }
 
+.add-course-form {
+  margin: 50px 100px;
+  background-color: #dfe3ee;
+  padding: 20px;
+  border: 2px solid #3b5997;
 
+}

@@ -24,8 +24,8 @@ const AddCourseForm = () => {
     }
 
     return (
-        <div className='CourseFormContainer'>
-            <form onSubmit={handleSubmit}>
+        <div className='CourseFormContainer center-align'>
+            <form className='add-course-form' onSubmit={handleSubmit}>
                 <label className='name' htmlFor='name'>
                     Course Name:
                 </label>
