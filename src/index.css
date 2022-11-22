@@ -180,3 +180,12 @@ a:active {
   scale: 1.03
 }
 
+.gpa {
+  font-weight:500;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(60, 126, 184);
+}
+
+#nav-logo:hover {
+color:#80acb9;
+}
