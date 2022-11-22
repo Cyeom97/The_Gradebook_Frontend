@@ -29,11 +29,11 @@ const CourseDetails = () => {
   return (
     <div className="details-containter">
       <div className="course-details-card">
-        <div>{courseDetails.name}</div>
+        <div class="coursedetail-name">{courseDetails.name}</div>
         {students.map((student) =>
           student.courseId === parseInt(courseId) ? (
-            <div>
-              <h4>{student.pupil.name}</h4>
+            <div className="student-name-container">
+              <h4 className="coursepage-student-name">{student.pupil.name}</h4>
             </div>
           ) : (
             <div></div>

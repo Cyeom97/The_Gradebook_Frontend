@@ -197,6 +197,35 @@ color:#8b9dc3;
   justify-content: space-between;
 }
 
+.coursedetail-name {
+font-size: 30px;
+text-align: center;
+ background-color: #8b9dc3;
+ width: 50%;
+ margin: 10px auto;
+ color: #f7f7f7;
+ padding: 30px 0;
+ font-weight: bold;
+}
+.course-details-card {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.student-name-container {
+ text-align: center;
+ border: 1px solid #8b9dc3;
+ background-color: #dfe3ee;
+ width: 50%;
+ margin: 10px auto;
+ 
+}
+
+.coursepage-student-name {
+
+}
+
 #name, #email, #student-btn {
   margin: 10px
 }
@@ -221,4 +250,5 @@ color:#8b9dc3;
   color: #2c4371;
   font-size: 7vh
 }
+
 

@@ -45,10 +45,10 @@ const Students = () => {
   }
 
   console.log('current grades ', currentGrades)
-  //console.log('current student gallery ', currentStudentGallery)
 
   return (
     <div className="students-list">
+
       <div>
         <h1 id='student-logo'>Students</h1>
       </div>
@@ -65,6 +65,7 @@ const Students = () => {
         <div className='form-btn'>
           <button type="submit" id='student-btn'>Add Student</button>
         </div>
+
       </form>
 
       <div
