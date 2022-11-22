@@ -49,6 +49,7 @@ const Students = () => {
 
   return (
     <div className="students-list">
+
       <form onSubmit={handleSubmit} className="form-type">
         <label htmlFor="name">Name:</label>
         <input id="name" value={form.name} onChange={handleChange}></input>
@@ -56,6 +57,7 @@ const Students = () => {
         <input id="email" value={form.email} onChange={handleChange}></input>
         <button type="submit">Add Student</button>
       </form>
+
       <div
         style={{
           backgroundColor: '#efefef',
@@ -112,6 +114,7 @@ const Students = () => {
 
       {/* {currentGrades.map((student) => (
         <div style={{ border: '1px solid red' }}>
+
           <h2>Name: {student.pupil.name}</h2>
           <h2>Email: {student.pupil.email}</h2>
           <h2>Course: {student.scores.name}</h2>

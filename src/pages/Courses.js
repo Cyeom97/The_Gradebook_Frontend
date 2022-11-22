@@ -27,7 +27,7 @@ const Courses = ( ) => {
     return(
         <>
             <div>
-                <div>
+                <div className='course-header'>
                     <div className='center-align'>
                         <h1 id='courses-logo'>
                             Courses

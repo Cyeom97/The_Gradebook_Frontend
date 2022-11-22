@@ -161,7 +161,7 @@ a:active {
   font-size: 5vh;
 }
 
-.course-box {
+.course-name {
   background-color: #dcdcdc;
   border: 2px solid black;
   border-radius: 20px;
@@ -174,7 +174,7 @@ a:active {
   font-size: 5vh;
 }
 
-.course-box:hover {
+.course-name:hover {
   transform: scale(1.05);
   filter: drop-shadow(5px 5px 5px #575656);
   scale: 1.03
