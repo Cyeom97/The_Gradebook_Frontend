@@ -11,13 +11,6 @@ const StudentCard = (props) => {
 
    
     return 
-        // <ul  className="studentcard-container">
-        //     {/* <li onClick={cardHandleClick} className="studentcard">
-        //         <h3 className='student-name'>{props.name}</h3>
-        //         <p className='student-gpa'>GPA: {props.gpa}</p>
-        //     </li> */}
-        //     <div>Hello</div>
-        // </ul>
     
 }
 
