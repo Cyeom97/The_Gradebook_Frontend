@@ -1,7 +1,6 @@
-
 import NavBar from './components/NavBar'
 import Home from './pages/Home'
-// import Students from './pages/Students'
+import Students from './pages/Students'
 import StudentDetails from './pages/StudentDetails'
 import Courses from './pages/Courses'
 import CourseDetails from './pages/CourseDetails'
@@ -16,13 +15,12 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/students" element={<Students />} /> */}
+          <Route path="/students" element={<Students />} />
           <Route path="/studentdetails" element={<StudentDetails />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/:courseId" element={<CourseDetails />} />
           <Route path="/AddStudent" element={<AddStudentForm />} />
           <Route path="/AddCourse" element={<AddCourseForm />} />
-
         </Routes>
       </main>
     </div>

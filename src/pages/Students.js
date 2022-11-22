@@ -2,39 +2,69 @@ import StudentCard from '../components/StudentCard'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const mockData = [
-  { name: 'Student1', overallGpa: [4.0, 3.4, 3.7, 3.9] },
-  { name: 'Student2', overallGpa: [4.0, 2.9, 3.0, 3.9] },
-  { name: 'Student3', overallGpa: [4.0, 3.7, 3.7, 2.4] },
-  { name: 'Student4', overallGpa: [3.5, 3.4, 4.0, 3.9] },
-  { name: 'Student5', overallGpa: [3.8, 3.4, 3.7, 3.8] },
-  { name: 'Student6', overallGpa: [3.0, 3.6, 3.7, 3.9] },
-  { name: 'Student7', overallGpa: [3.0, 3.9, 3.8, 3.9] },
-  { name: 'Student8', overallGpa: [4.0, 3.4, 3.3, 3.3] },
-  { name: 'Student9', overallGpa: [4.0, 3.4, 4.0, 3.2] },
-  { name: 'Student10', overallGpa: [3.0, 3.4, 3.3, 3.3] },
-  { name: 'Student11', overallGpa: [2.5, 3.4, 3.2, 3.5] },
-  { name: 'Student12', overallGpa: [4.0, 3.3, 3.2, 3.6] },
-  { name: 'Student13', overallGpa: [3.6, 3.9, 3.1, 3.7] }
-]
-
 const Students = () => {
-  const [currentStudentGallery, setStudentGallery] = useState()
+  const [currentStudentGallery, setStudentGallery] = useState([])
+  const [currentGrades, setGrades] = useState([])
+  const [newKids, setNewKids] = useState([])
+  const [form, setForm] = useState({
+    name: '',
+    email: ''
+  })
 
   useEffect(() => {
     const getAllStudents = async () => {
-      let response = await axios.get('http://localhost:3001/')
+      let response = await axios.get('http://localhost:3001/students')
       setStudentGallery(response.data)
     }
     getAllStudents()
-  })
+  }, [])
+
+  useEffect(() => {
+    const getGrades = async () => {
+      let response = await axios.get('http://localhost:3001/grades')
+      setGrades(response.data)
+    }
+    getGrades()
+  }, [])
+
+  const handleChange = (event) => {
+    setForm({ ...form, [event.target.id]: event.target.value })
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    let newStudent = await axios.post('http://localhost:3001/students', form)
+    setNewKids([...newKids, newStudent.data])
+    setForm({ name: '', email: '' })
+  }
 
   return (
     <div className="students-list">
-      {mockData.map((cardItem) => {
-        console.log(cardItem.name)
-        return <StudentCard name={cardItem.name} gpa={cardItem.overallGpa} />
-      })}
+      <form onSubmit={handleSubmit} className="form-type">
+        <label htmlFor="name">Name:</label>
+        <input id="name" value={form.name} onChange={handleChange}></input>
+        <label htmlFor="email">email:</label>
+        <input id="email" value={form.email} onChange={handleChange}></input>
+        <button type="submit">Add Student</button>
+      </form>
+      {currentGrades.map((student) => (
+        <div>
+          <h2>Name: {student.pupil.name}</h2>
+          <h2>Email: {student.pupil.email}</h2>
+          <h2>Course: {student.scores.name}</h2>
+          <h3>Grade: {student.score}</h3>
+        </div>
+      ))}
+      {currentStudentGallery.map((mates) =>
+        mates.id >= 5 ? (
+          <div>
+            <h3>{mates.name}</h3>
+            <h3>{mates.email}</h3>
+          </div>
+        ) : (
+          <div></div>
+        )
+      )}
     </div>
   )
 }
