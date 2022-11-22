@@ -41,7 +41,7 @@ const Students = () => {
     }
 
     getAllStudents()
-  }, [])
+  }, [currentStudentGallery])
 
   useEffect(() => {
     const getGrades = async () => {
