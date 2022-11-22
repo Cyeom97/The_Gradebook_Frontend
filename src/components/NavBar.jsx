@@ -1,4 +1,4 @@
-import { Link, useNagivate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
 
@@ -12,8 +12,8 @@ const NavBar = () => {
     return (
         <header id="header">
             <nav className='flex-row nav-links'>
-                <div id='nav-logo'>
-                    <h1>Gradebook</h1>
+                <div>
+                    <h1 id='nav-logo'>gradebook</h1>
                 </div>
                 <div className='center-column flex-row'>
                     <Link to='/'>Home</Link>
