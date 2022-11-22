@@ -31,12 +31,12 @@ const CourseDetails = () => {
       <div className="course-details-card">
         <div>{courseDetails.name}</div>
         {students.map((student) =>
-          student.courseId === courseId ? (
+          student.courseId === parseInt(courseId) ? (
             <div>
-              <h2>{student.pupil.name}</h2>
+              <h4>{student.pupil.name}</h4>
             </div>
           ) : (
-            <div>hi</div>
+            <div></div>
           )
         )}
       </div>
