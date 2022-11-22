@@ -48,12 +48,24 @@ const Students = () => {
 
   return (
     <div className="students-list">
-      <form onSubmit={handleSubmit} className="form-type">
-        <label htmlFor="name">Name:</label>
-        <input id="name" value={form.name} onChange={handleChange}></input>
-        <label htmlFor="email">email:</label>
-        <input id="email" value={form.email} onChange={handleChange}></input>
-        <button type="submit">Add Student</button>
+
+      <div>
+        <h1 id='student-logo'>Students</h1>
+      </div>
+
+      <form onSubmit={handleSubmit} className="form-type student-form">
+        <div className='form-name'>
+          <label htmlFor="name">Name:</label>
+          <input id="name" value={form.name} onChange={handleChange}></input>
+        </div>
+        <div className='form-email'>
+          <label htmlFor="email">email:</label>
+          <input id="email" value={form.email} onChange={handleChange}></input>
+        </div>
+        <div className='form-btn'>
+          <button type="submit" id='student-btn'>Add Student</button>
+        </div>
+
       </form>
 
       <div
