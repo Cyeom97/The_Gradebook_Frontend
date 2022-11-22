@@ -6,11 +6,19 @@ const StudentDetails = (props) => {
         <p className="studentgpa">GPA:{props.gpa}</p>
       </div>
       <div className="form-container">
-        <div className="course-column">
-          <h2 className="course-title">Courses</h2>
+        <div className="column">
+          <h2 className="courses-title">Courses</h2>
+          <div className="row">Psychology</div>
+          <div className="row">Literature</div>
+          <div className="row">Algebra</div>
+          <div className="row">Humanities</div>
         </div>
-        <div className="grades-column">
+        <div className="column">
           <h2 className="grades-title">Grades</h2>
+          <div className="row">4.0</div>
+          <div className="row">3.8</div>
+          <div className="row">3.5</div>
+          <div className="row">3.9</div>
         </div>
       </div>
     </div>
