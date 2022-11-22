@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 code {
@@ -41,12 +42,12 @@ code {
   background-color: rgb(192, 221, 250);
 }
 
-
 .student-name-gpa {
   text-align: left;
   width: 600px;
   margin: 50px auto;
 }
+
 .form-container {
   display: flex;
   flex-direction: row;
@@ -55,7 +56,6 @@ code {
   width: 600px;
   border: 1px solid rgb(230, 239, 242);
   margin: 0 auto;
-
 }
 
 .column {
@@ -74,16 +74,15 @@ a {
 
 a:link {
   text-decoration: none;
-  color: #4e4e50
+  color: #fafafa
 }
 
 a:visited {
   text-decoration: none;
-  color: #4e4e50
+  color: #fafafa
 }
 a:hover {
   text-decoration: none;
-  color: rgb(36, 36, 36);
   scale: 1.10;
 }
 
@@ -123,23 +122,23 @@ a:active {
 
 .students-card, .courses-card {
   margin: 30px;
-  background-color: rgb(211,211,211);
+  background-color: #3b5997 ;
   padding: 50px;
   font-size: 8vh;
   border: 2px solid black;
   border-radius: 10px;
-  filter: drop-shadow(0px 2px 2px  #171617);
+  filter: drop-shadow(0px 2px 2px  #8b9dc3);
 }
 
 .students-card:hover, .courses-card:hover {
   transform: scale(1.05);
-  filter: drop-shadow(10px 10px 20px #1e1e1e);
+  filter: drop-shadow(10px 10px 20px #8b9dc3);
 }
 
 
 #header {
   background-color: white;
-  filter: drop-shadow(1px 1px 2px #dcdcdc);
+  filter: drop-shadow(1px 1px 2px #2c4371 );
   position: sticky;
   top: 0;
   z-index: 1;
@@ -149,6 +148,8 @@ a:active {
 
 .nav-links {
   justify-content: space-between;
+  background-color: #3b5997;
+  color:rgb(230, 239, 242)
 }
 
 #nav-logo {
@@ -157,8 +158,8 @@ a:active {
 }
 
 .course-name {
-  background-color: #dcdcdc;
-  border: 2px solid black;
+  background-color: #8b9dc3;
+  border: 2px solid #2c4371;
   border-radius: 20px;
   margin: 50px 100px;
   padding: 40px;
@@ -167,20 +168,57 @@ a:active {
   align-items: center;
   flex-wrap: wrap;
   font-size: 5vh;
+  color: #2c4371;
+  font-weight: bolder;
 }
 
 .course-name:hover {
   transform: scale(1.05);
-  filter: drop-shadow(5px 5px 5px #575656);
+  filter: drop-shadow(2px 2px 2px #3b5997);
   scale: 1.03
 }
 
 .gpa {
   font-weight:500;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(60, 126, 184);
+  color: #3b5997;
 }
 
 #nav-logo:hover {
-color:#80acb9;
+color:#8b9dc3;
 }
+
+.student-form {
+  background-color: #f7f7f7;
+  margin: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#name, #email, #student-btn {
+  margin: 10px
+}
+
+#add-btn {
+  background-color: #3b5997;
+  border: 2px solid #2c4371;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#add-btn:hover {
+  scale: 1.05;
+}
+
+#courses-logo {
+  color: #2c4371;
+  font-size: 7vh
+}
+
