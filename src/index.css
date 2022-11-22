@@ -198,7 +198,7 @@ color:#8b9dc3;
 }
 
 .coursedetail-name {
-font-size: 30px;
+font-size: 38px;
 text-align: center;
  background-color: #8b9dc3;
  width: 50%;
@@ -220,6 +220,10 @@ text-align: center;
  width: 50%;
  margin: 10px auto;
  
+}
+
+.coursepage-student-name {
+  font-size: 22px;
 }
 
 #name, #email, #student-btn {
